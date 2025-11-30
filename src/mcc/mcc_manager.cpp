@@ -74,6 +74,8 @@ int c_mcc_manager::initialize() {
 	player_manager()->initialize();
 
 	// Initialize the d3d11
+	// Fix for fatal crash on version 1.0.2205.0 (credit Evasion3356)
+	Sleep(1500);
 	d3d11_manager()->initialize();
 
 	// Wait for MCC to initialize
